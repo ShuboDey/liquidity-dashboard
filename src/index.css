@@ -1,0 +1,61 @@
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ff:        'IBM Plex Sans', sans-serif;
+  --fm:        'IBM Plex Mono', monospace;
+
+  /* Surfaces */
+  --bg:        #F2F1EE;
+  --surface:   #FFFFFF;
+  --surface2:  #F8F7F5;
+
+  /* Borders */
+  --border:    rgba(0, 0, 0, 0.10);
+  --border-md: rgba(0, 0, 0, 0.20);
+
+  /* Text */
+  --text:      #1A1A18;
+  --muted:     #6B6A67;
+  --hint:      #9E9D9A;
+
+  /* Status colours */
+  --red:        #C0392B;
+  --red-bg:     #FDF2F2;
+  --red-border: #E8BFBF;
+
+  --amber:        #9A6700;
+  --amber-bg:     #FFFBF0;
+  --amber-border: #EDD899;
+
+  --green:        #1A7A4A;
+  --green-bg:     #F0FBF5;
+  --green-border: #A8DBBE;
+
+  --blue:        #1A5FA8;
+  --blue-bg:     #EEF4FC;
+  --blue-border: #A8C6EA;
+
+  /* Radius */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--ff);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font-family: var(--ff); cursor: pointer; }
+textarea { font-family: var(--ff); }
+input { font-family: var(--ff); }
