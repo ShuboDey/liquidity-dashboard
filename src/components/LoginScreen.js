@@ -22,6 +22,16 @@ export default function LoginScreen() {
     }
   }
 
+  async function handleDemoLogin() {
+    setEmail('demo@liquidityiq.com');
+    setPassword('DemoPass123x');
+    try {
+      await signIn('demo@liquidityiq.com', 'DemoPass123x');
+    } catch {
+      // error is shown from AuthContext
+    }
+  }
+
   const displayError = formErr || error;
 
   return (
@@ -206,10 +216,29 @@ export default function LoginScreen() {
             </button>
           </form>
         </div>
-
-        <p style={{ textAlign: 'center', fontSize: 11, color: 'var(--hint)' }}>
-          Contact your administrator to request access.
-        </p>
+                <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <button
+            type="button"
+            onClick={handleDemoLogin}
+            disabled={loading}
+            style={{
+              fontSize: 12,
+              fontWeight: 500,
+              color: 'var(--text)',
+              background: 'var(--surface)',
+              border: '0.5px solid var(--border-md)',
+              borderRadius: 'var(--r-sm)',
+              padding: '8px 14px',
+              cursor: loading ? 'not-allowed' : 'pointer',
+              alignSelf: 'center',
+            }}
+          >
+            Try live demo
+          </button>
+          <p style={{ fontSize: 11, color: 'var(--hint)' }}>
+            demo@liquidityiq.com · DemoPass123x
+          </p>
+        </div>d
       </div>
     </div>
   );
